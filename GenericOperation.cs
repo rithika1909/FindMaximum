@@ -16,21 +16,24 @@ namespace FindMax
             if (comparer.Compare(a, b) >= 0 && comparer.Compare(a, c) >= 0)
             {
                 max = a;
-                Console.WriteLine("a is max");
+                PrintMax(max);
             }
             if (comparer.Compare(b, c) >= 0 && comparer.Compare(b, a) >= 0)
             {
                 max = b;
-                Console.WriteLine("b is max");
+                PrintMax(max);
             }
             if (comparer.Compare(c, a) >= 0 && comparer.Compare(c, b) >= 0)
             {
                 max = c;
-                Console.WriteLine("c is max");
+                PrintMax(max);
             }
             return max;
         }
-        
+        public void PrintMax<T>(T max)
+        {
+            Console.WriteLine("Max Value:" + max);
+        }
 
 
 
